@@ -81,7 +81,6 @@ clothing.set_player_clothing = function(self, player)
 	local clothing_meta = player_meta:get_string("clothing:inventory")
 	local clothes = clothing_meta and minetest.deserialize(clothing_meta) or {}
 
-	local capes = {}
 	for i=1, 6 do
 		local stack = ItemStack(clothes[i])
 		if stack:get_count() == 1 then
