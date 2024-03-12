@@ -2,8 +2,7 @@
 if clothing.have_skinsdb then
   minetest.register_on_mods_loaded(function()
       if minetest.settings:get_bool("clothing_character", true) then
-        local default_skin_obj = skins.get(skins.default)
-        default_skin_obj:set_texture("clothing_character_male.png")
+        skins.default = "clothing_skin"
       end
       -- unclothed male
       local clothing_skin = skins.new("clothing_skin")
